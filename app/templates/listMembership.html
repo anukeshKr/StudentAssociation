@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{%block title%}
+Association Membership List
+{%endblock%}
+
+
+{%block content%}
+<div class="container">
+  <h1>Associations</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Assocation Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in results %}
+      <tr>
+        <td>{{ r.first_name }} {{ r.last_name }}</td>
+        <td>{{ r.email }}</td>
+        <td>{{ r[3] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  </div>
+{%endblock%}

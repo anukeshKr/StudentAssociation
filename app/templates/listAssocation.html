@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{%block title%}
+Association List
+{%endblock%}
+{%block main%}
+
+<div class="container">
+  <h1>Associations</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Assocation Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for a in associations %}
+      <tr>
+        <td>{{ a.id }}</td>
+        <td>{{ a.name }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  </div>
+{%endblock%}

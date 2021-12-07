@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block title%}
+Home Page
+{%endblock%}
+{%block main%}
+
+<div class="container">
+    {{super()}}
+    <div class="jumbotron">
+      <h1>Hi {{ current_user.first_name if current_user.is_authenticated else 'Sir' }}, Welcome to Student Association Membership</h1>
+      <p>It is a highly flexible, web based, simplistic, Student Management Association tool.
+        As you explore this little application, you will find that it is very simple to use and does what is expected from it.
+        The application is still under development phase and all your inputs and suggestions are invited.
+      </p>
+      <h6>
+          Feel Free to contact if you need customized application.
+      </h6>
+    </div>
+  </div>
+{%endblock%}

@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{%block title%}
+Student Association Membership
+{%endblock%}
+{%block main%}
+    <div class="container">
+    <h1>{{ action }} {{ data_type }}</h1>
+    {% for a in anchors %}
+        <a class="btn btn-primary" href="{{a['url']}}">{{a['text']}}</a> 
+    {% endfor %}
+    </br>
+    </br>
+    <form class="form" method="{{ method | d('POST') }}" action="{{ form_action }}" role="form">
+    {{  wtf.quick_form(form,button_map=({'submit': 'primary','quickBook':'primary'}))  }}
+    </form>
+</div>
+{%endblock%}
